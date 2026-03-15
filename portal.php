@@ -174,7 +174,7 @@ font-weight:bold;
 
 <a href="#">Dashboard</a>
 
-<a href="http://localhost:3000/store" target="_blank">
+<a href="http://auramarket-frontend.vercel.app/store" target="_blank">
 Open Store
 </a>
 
@@ -227,26 +227,7 @@ System Status
 
 <input id="ecoScore" placeholder="Eco Score">
 
-<!-- <h3>Supply Chain Journey</h3>
 
-<button id="addStageBtn" onclick="addEmptyStage()" style="display:none">
-Add First Stage
-</button>
-
-<table id="supplyTable">
-
-<thead>
-<tr>
-<th>Stage</th>
-<th>Location</th>
-<th>Timestamp</th>
-<th>Actions</th>
-</tr>
-</thead>
-
-<tbody></tbody>
-
-</table> -->
 <div id="supplySection" style="display:none">
 
 <h3>Supply Chain Journey</h3>
@@ -367,7 +348,7 @@ manualLink:document.getElementById("newManual").value
 
 }
 
-fetch("http://localhost:8080/api/products",{
+fetch(API+"/products",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
@@ -383,7 +364,7 @@ document.getElementById("addStatus").innerText="Product Added"
 
 function loadProductCount(){
 
-fetch("http://localhost:8080/api/products")
+fetch(API+"/products")
 .then(res=>res.json())
 .then(data=>{
 document.getElementById("productCount").innerText=data.length
@@ -403,7 +384,7 @@ loadProductCount()
 
 <script>
 
-const API="http://localhost:8080/api"
+const API="http://auramarket-api.onrender.com/api"
 
 function loadProducts(){
 
@@ -430,25 +411,6 @@ select.appendChild(option)
 
 loadProducts()
 
-// function loadProduct(){
-
-// let id=document.getElementById("productSelect").value
-
-// if(!id) return
-
-// fetch(API+"/products/"+id)
-// .then(res=>res.json())
-// .then(p=>{
-
-// document.getElementById("productId").value=p.productId
-// document.getElementById("price").value=p.price
-// document.getElementById("ecoScore").value=p.ecoScore
-
-// })
-
-// loadSupplyChain(id)
-
-// }
 
 function loadProduct(){
 
