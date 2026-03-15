@@ -174,7 +174,7 @@ font-weight:bold;
 
 <a href="#">Dashboard</a>
 
-<a href="http://auramarket-frontend.vercel.app/store" target="_blank">
+<a href="https://auramarket-frontend.vercel.app/store" target="_blank">
 Open Store
 </a>
 
@@ -384,7 +384,7 @@ loadProductCount()
 
 <script>
 
-const API="http://auramarket-api.onrender.com/api"
+const API="https://auramarket-api.onrender.com/api"
 
 function loadProducts(){
 
